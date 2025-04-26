@@ -29,7 +29,7 @@ if x11_deps.found() and epoxy_deps.found()
 endif
 
 enable_qt = false
-qt_dep = dependency('qt5', modules : ['Core', 'Widgets'], required : get_option('enable_qt'))
+qt_dep = dependency('qt6', modules : ['Core', 'Widgets'], required : get_option('enable_qt'))
 if qt_dep.found()
     rpicam_app_dep += qt_dep
     rpicam_app_src += files('qt_preview.cpp')
